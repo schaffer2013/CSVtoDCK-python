@@ -1,6 +1,7 @@
 import scrython
 import csv
 import time
+import shutil
 
 from PIL import Image
 import requests
@@ -9,7 +10,7 @@ from createDCK import CardFromCSV
 from io import BytesIO
 #import pygame
 
-deckName="MY TEST DECK"
+deckName=input("Enter your deck name : ") 
 
 arrCards=[]
 
@@ -46,4 +47,9 @@ for card in arrCards:
         time.sleep(0.1)
 
 f.close()
+source=deckName+".dck"
+dest='C:\\Users\\phils\\AppData\\Roaming\\Forge\\decks\\commander'
+
+shutil.copy2(source,dest)
+
 
