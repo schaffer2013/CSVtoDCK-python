@@ -12,7 +12,7 @@ class CardFromCSV:
         self.board=brd
         self.quantity=int(qty)
         self.name=n
-        self.isCommander= (cmd=='True')
+        self.isCommander= (cmd=='TRUE')or(cmd=='True')
 
 
 
