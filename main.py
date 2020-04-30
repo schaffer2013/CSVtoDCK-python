@@ -2,6 +2,8 @@ import scrython
 import csv
 import time
 import shutil
+from tkinter.filedialog import askopenfilename
+
 
 from PIL import Image
 import requests
@@ -13,8 +15,10 @@ from io import BytesIO
 deckName=input("Enter your deck name : ") 
 
 arrCards=[]
+filename = askopenfilename()
+print(filename)
 
-with open('testDeck.csv', newline='') as csvfile:
+with open(filename, newline='') as csvfile:
         reader=csv.reader(csvfile, delimiter=',')
         header=next(reader) #Get past header
 
